@@ -10,3 +10,9 @@ Cargo.lock
 **/*.rs.bk
 
 .krustlet
+
+# Terraform
+*.tfstate
+*.tfstate.backup
+.terraform/
+*.plan
