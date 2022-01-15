@@ -110,7 +110,7 @@ resource "azurerm_virtual_machine_extension" "node02_vm_ext" {
 
   settings = <<SETTINGS
     {
-      "commandToExecute": ". /etc/os-release && sudo bash -c 'echo \"deb https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/xUbuntu_$${VERSION_ID}/ /\" > /etc/apt/sources.list.d/podman.list' && curl -L \"https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/xUbuntu_$${VERSION_ID}/Release.key\" -o key-data && sudo apt-key add key-data"
+      "commandToExecute": ". /etc/os-release && sudo bash -c 'echo \"deb https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/xUbuntu_18.04/ /\" > /etc/apt/sources.list.d/podman.list' && curl -L \"https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/xUbuntu_18.04/Release.key\" -o key-data && sudo apt-key add key-data && sudo apt-get -y update && sudo apt-get -y install podman"
     }
 SETTINGS
 }
